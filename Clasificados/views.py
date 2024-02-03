@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.http import FileResponse
 from .models import Anuncio
 from datetime import date
-
+from django.shortcuts import redirect
 # Create your views here
 def bdsave(request):
     filepath = './db.sqlite3'
@@ -23,7 +23,7 @@ def InsertarAnuncio(request):
     nuevo_anuncion =  Anuncio(titulo=titulo,precio=price,telefono=contact,descripcion=description,fecha=date.today(),Image=Imagn)
     nuevo_anuncion.save()
     
-    return render(request,"crearanuncion.html")
+    return redirect("/")
 
 def CreateView(request):
     return render(request,"crearanuncion.html")
