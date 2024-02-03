@@ -13,11 +13,12 @@ def bdsave(request):
     response['Content-Disposition'] = f'attachment; filename="{filename}"'
     return response
     pass
+
 def InsertarAnuncio(request):
     titulo = request.POST["title"]
     price = request.POST["price"]
     contact = request.POST["contact"]
-    description = request.POST["descripcion"]
+    description = request.POST["description"]
     Imagn = request.FILES["image"]
     nuevo_anuncion =  Anuncio(titulo=titulo,precio=price,telefono=contact,descripcion=description,fecha=date.today(),Image=Imagn)
     nuevo_anuncion.save()
