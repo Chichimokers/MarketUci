@@ -22,12 +22,13 @@
 <body>
     <nav class="navbar navbar-light"> <a class="navbar-brand" href="#">Logo</a>
         <form class="form-inline" method="GET"> <input class="form-control mr-sm-2" type="search" id="txtSearch" name="hint" placeholder="Buscar..." required autofocus> <button style="background-color: #f00; border-color: transparent; color: #fff;" class="btn btn-outline-success my-2 my-sm-0 "
-                type="submit">Buscar</button> </form> <a style="background-color: #f00; border-color: transparent; color: #fff;" href="create/" class="btn btn-primary ml-auto">Add Anuncio</a> </nav>
+                type="submit">Buscar</button> </form> <a style="background-color: #f00; border-color: transparent; color: #fff;" href="create/" class="btn btn-primary ml-auto">Agregar Anuncio</a> </nav>
 
 
 
-    <div class="container ">
-        <div class="row">
+    <div class="container embed-responsive ">
+        <div class="row ">
+
             {% for e in data %}
             <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                 <div class="card h-100">
@@ -44,8 +45,12 @@
             </div>
             {% endfor %}
         </div>
+
     </div>
 
+    <div style="padding-top: 10em;">
+
+    </div>
 
 
     <div class="footer">  
